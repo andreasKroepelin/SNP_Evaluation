@@ -1,0 +1,43 @@
+<body style="font-family:verdana;">
+    <h2><span style="color: #000080;">SNP Evaluation - </span><span style="color: #000080;">Quick Introduction</span></h2>
+    <img src="ICONSRC" alt="" width="64" height="64">
+    <hr>
+    <h3>Input Data</h3>
+    Load a SNP table: <span style="color: #808080;"><em>Data &gt; Load SNP Table</em></span><br>
+    Load one or two VCF file(s): <span style="color: #808080;"><em> Data &gt; Load 1 VCF File</em></span> or <span style="color: #808080;"><em> Data &gt; Load 2 VCF Files</em></span><br>
+    Optionally, load a protein table: <span style="color: #808080;"><em>Data &gt; Load Protein Table</em></span><br>
+    <h3>Choose SNPs</h3>
+    Click <img src="PLUSSRC" alt="" width="16" height="16"><span style="color: #808080;"><em>Add tab</em></span> and then choose whether you want the unique, the shared or all SNPs of a given sample (should be the sample of your VCF file), or the complete SNP table or certain positions which you can specify in a file (one line for each position number).
+    <h3>Configure measures</h3>
+    Click <span style="color: #808080;"><em>Measures > Configure Measures</em></span> to open a configuration form. There you can define a new measure by:
+    <ul>
+        <li> <b>Single Measure</b>: this value is taken from all genome positions in the specified window </li>
+        <li> <b>Window Measure</b>: this operation produces one number for the whole window </li>
+        <li> <b>Window Size</b>: this number defines how many genome positions around the SNP should be considered </li>
+        <li> <b>Standardization</b>: 
+            <ul>
+                <li><b>None</b>: do nothing</li>
+                <li><b>Subtract Mean</b>: subtract the genome wide mean of the Single Measure</li>
+                <li><b>Z-Standardization</b>: subtract the genome wide mean and divide by the standard deviation
+            </ul>
+    </ul>
+    You then have to give the measure a unique name, e. g. by clicking <span style="color: #808080;"><em>Use name suggestion</em></span>.
+
+    <h3>Evaluate</h3>
+    When you click <img src="GOSRC" alt="" width="16" height="16"><span style="color: #808080;"><em>Evaluate!</em></span>, you get a table and a graphical representation of the evaluation. For each SNP you find its position, in how many samples it occurs, the values of each of the defined measures and additionally informations derived from the protein table if loaded.<br>
+    Double click on a row in the table to get to the corresponding row in the bar plot and vice versa.
+
+    <h3>Further Features</h3>
+    <h4>Filtering</h4>
+    At <span style="color: #808080;"><em>Measures > Set Filters</em></span> you can open a form where you can specify filters. Each filter regards to one table column and you can use the typical SQL operators.
+    <h4>Comparisons</h4>
+    This is only relevant when loading two VCF files. At <span style="color: #808080;"><em>Measures > Set Comparisons</em></span> you can define whether you want to see the ratio or difference of your measures of the first and second VCF file.
+    <h4>Correlations</h4>
+    At <span style="color: #808080;"><em>Evaluation > View Correlations</em></span> you can open a window where you can analyse correlations between any two numerical columns of the table. You must specify which table to use for the calculation and which table(s) should appear in the dot plot.
+    <h4>Export</h4>
+    Finally you can export all tables and bar plots at <span style="color: #808080;"><em>Evaluation > Export evaluation</em></span> after giving them a name.
+    <br><br><br>
+    <hr>
+
+    For further questions, see the <a href="link.to/pdf">PDF User guide</a> or contact Andreas Kröpelin (<a href="mailto:kroepelin@shh.mpg.de">kroepelin@shh.mpg.de</a>).
+</body>
